@@ -1,0 +1,110 @@
+.button {
+    padding: 1.5rem 3.5rem;
+    box-shadow: 0 0.8rem 1.1rem rgba($color-black, .1);
+    
+    transition-property: transform, box-shadow;
+    transition-duration: 0.1s;
+    transition-timing-function: ease-out;
+    outline: none;
+
+    &:active {
+        transform: translateY(0.2rem);
+        box-shadow: 0 0.2rem 0.4rem rgba($color-black, .3);
+    }
+    
+    &--cta {
+        border-radius: 6rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 1.5rem;
+    }
+    
+    &--white {
+        background: $color-white;
+        color: $color-dark;
+    }
+
+    &--green {
+        background: $color-primary;
+        color: $color-white;
+
+        // Tab-port responsive
+        @include respond(tab-port) {
+            width: 100%;
+        }
+
+        // Phone responsive
+        @include respond(phone-land) {
+            width: 100%;
+        }
+
+        // Phone responsive
+        @include respond(phone) {
+            width: 100%;
+        }
+    }
+
+    &--text {
+        &:link,
+        &:visited {
+            font-size: $default-font-size;
+            color: $color-primary;
+            border-bottom: 1px solid $color-primary;
+            padding: 3px;
+            outline: none;
+            transition-property: background-color, transform, box-shadow;
+            transition-duration: .3s;
+            transition-timing-function: ease-out;
+
+            // Tab-port responsive
+            @include respond(tab-port) {
+                font-size: 1.9rem;
+            }
+
+            // Phone responsive
+            @include respond(phone-land) {
+                font-size: 1.9rem;
+            }
+
+            // Phone responsive
+            @include respond(phone) {
+                font-size: 1.9rem;
+            }
+        }
+
+        &:hover {
+            background-color: $color-primary;
+            color: $color-white;
+            border: none;
+            transform: translateY(-0.25rem);
+            box-shadow: 0 0.5rem 2rem rgba($color-black, .1);
+        }
+
+        &:active {
+            transform: translateY(0);
+            box-shadow: 0 0.3rem 0.8rem rgba($color-black, .1);
+        }
+
+    }
+
+    &--small {
+        &:link,
+        &:visited {
+            font-size: 1.5rem;
+            color: $color-primary;
+            padding: 3px;
+            outline: none;
+            transition-property: background-color, transform, box-shadow;
+            transition-duration: .3s;
+            transition-timing-function: ease-out;
+        }
+
+        &:hover {
+            background-color: $color-primary;
+            color: $color-white;
+            border: none;
+            box-shadow: 0 0.5rem 2rem rgba($color-black, .1);
+        }
+
+    }
+}

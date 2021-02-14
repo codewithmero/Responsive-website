@@ -1,0 +1,67 @@
+.animation {
+
+    &__left {
+        animation-name: moveInLeft;
+        animation-duration: 1000ms;
+        animation-timing-function: ease-out;
+    }
+
+    &__right {
+        animation-name: moveInRight;
+        animation-duration: 1000ms;
+        animation-timing-function: ease-out;
+    }
+
+    &__up {
+        animation-name: moveInUp;
+        animation-duration: 1000ms;
+        animation-timing-function: ease-out;
+    }
+}
+
+/* Animation */
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-5rem);
+    }
+
+    80% {
+        opacity: 1;
+        transform: translateX(1rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(5rem);
+    }
+
+    80% {
+        opacity: 1;
+        transform: translateX(-1rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes moveInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(5rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

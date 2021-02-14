@@ -1,0 +1,89 @@
+.banner {
+    display: inline-block;
+    background: rgba($color-dark, .9);
+
+    position: absolute;
+    top: 1.8rem;
+    left: 1.8rem;
+    padding: 1rem 2rem;
+
+    box-shadow: 0 0.4rem 0.9rem rgba($color-dark, .3);
+}
+
+.banner > h1 {
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    position: relative;
+    background: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
+    background-clip: text;
+    color: transparent;
+}
+
+.banner > h1::before,
+.banner > h1::after {
+    content: "";
+    z-index: 10;
+}
+
+.banner > h1::before {
+    position: absolute;
+    left: -1rem;
+    top: 0;
+    bottom: 0;
+    border: 2px solid $color-primary;
+}
+
+.banner > h1::after {
+    position: absolute;
+    right: -1rem;
+    top: 0;
+    bottom: 0;
+    border: 2px solid $color-primary;
+}
+
+.banner-box {
+    position: relative;
+    padding: 15rem 0;
+    text-align: center;
+    background-image: linear-gradient(to right, rgba($color-dark, .7), rgba($color-dark, .7)),
+                      url(../img/gallery_img.jpg);
+    background-size: cover;
+    background-position: center;
+
+    // Phone responsive
+    @include respond(phone-land) {
+        padding: 10rem 0;
+    }
+
+    // Phone responsive
+    @include respond(phone) {
+        padding: 10rem 0;
+    }
+}
+
+.banner-box > h1 {
+    font-size: 7rem;
+    color: $color-white;
+
+    border: 5px solid $color-white;
+    display: inline-block;
+    padding: 1rem 2rem;
+
+    // Phone responsive
+    @include respond(phone-land) {
+        font-size: 4rem;
+        font-weight: 600;
+        border: 3px solid $color-white;
+        padding: 1rem 2rem;
+    }
+
+    // Phone responsive
+    @include respond(phone) {
+        font-size: 4rem;
+        font-weight: 600;
+        border: 3px solid $color-white;
+        padding: 1rem 2rem;
+    }
+}

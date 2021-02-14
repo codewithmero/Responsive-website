@@ -1,0 +1,32 @@
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    position: relative;
+    gap: 1.5rem;
+
+    padding: 1.5rem;
+
+    // Phone responsive
+    @include respond(phone-land) {
+        padding: 0;
+        gap: 0;
+    }
+
+    // Phone responsive
+    @include respond(phone) {
+        padding: 0;
+        gap: 0;
+    }
+}
+
+.gallery > div > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: 0 0.3rem 0.8rem rgba($color-dark, .2);
+}
+
+.gallery > div {
+    flex: 1 1 350px;
+}

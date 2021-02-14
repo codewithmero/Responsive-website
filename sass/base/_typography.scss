@@ -1,0 +1,186 @@
+body {
+    font-family: 'Lato', sans-serif, Verdana;
+    line-height: 1.7;
+    font-size: $default-font-size;
+    font-weight: 400; 
+    // padding: 3rem; 
+}
+
+.heading-normal {
+    display: inline-block;
+    font-size: 7rem;
+    color: $color-dark;
+    font-weight: 900;
+    font-family: 'Playfair Display';
+    text-shadow: 0 0.3rem 0.4rem rgba($color-black, .3);
+}
+
+.heading-primary {
+    display: inline-block;
+    background: $color-dark;
+    padding: 0.2rem 1.1rem;
+    font-size: 4.5rem;
+    color: $color-white;
+    letter-spacing: 0.25rem;
+
+    // Tablet-portrait responsive
+    @include respond(tab-port) {
+        background: transparent;
+        padding: 0.2rem 1rem;
+        font-size: 3rem;
+        line-height: 1.5;
+    }
+
+    // Tablet-portrait responsive
+    @include respond(phone-land) {
+        background: transparent;
+        padding: 0.2rem 1rem;
+        font-size: 2rem;
+        line-height: 1.5;
+    }
+
+    // Phone responsive
+    @include respond(phone) {
+        background: transparent;
+        padding: 0.2rem 1rem;
+        font-size: 2.2rem;
+        line-height: 1.4;
+    } 
+}
+
+.heading-secondary {
+    background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    display: inline-block;
+    font-size: 3.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .15rem;
+    transition: text-shadow .2s ease-out;
+
+    // Tablet-portrait responsive
+    @include respond(tab-port) {
+        font-size: 2.8rem;
+        text-align: center;
+        display: block;
+    }
+
+    // Phone responsive
+    @include respond(phone-land) {
+        font-size: 2.8rem;
+        text-align: center;
+        display: block;
+    }
+
+    // Phone responsive
+    @include respond(phone) {
+        font-size: 2.8rem;
+        text-align: center;
+        display: block;
+    }
+}
+
+.heading-tertiary,
+.paragraph {
+    color: $color-grey-dark;
+}
+
+.heading-tertiary {
+    font-size: $default-font-size;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.paragraph {
+    font-size: 1.6rem;
+}
+
+.paragraph-normal {
+    font-size: 2.5rem;
+    color: $color-dark;
+    text-shadow: 0 0.3rem 0.4rem rgba($color-black, .3);
+}
+
+.heading-invert, 
+.heading-sub {
+    color: $color-dark;
+
+    // Tab-port responsive
+    @include respond(tab-port) {
+        color: $color-white;
+    }
+
+    // Phone responsive
+    @include respond(phone-land) {
+        color: $color-white;
+    }
+
+    // Phone responsive
+    @include respond(phone) {
+        color: $color-white;
+    }
+}
+
+.heading-invert {
+    font-size: 3rem;
+    letter-spacing: 1rem;
+
+    // Tab-port responsive
+    @include respond(tab-port) {
+        font-size: 4.5rem;
+    }
+
+    // Phone responsive
+    @include respond(phone-land) {
+        font-size: 4.5rem;
+    }
+
+    // Phone responsive
+    @include respond(phone) {
+        font-size: 4.5rem;
+    }
+}
+
+.heading-sub {
+
+    // Tab-port responsive
+    @include respond(tab-port) {
+        display: none;
+    }
+
+    // Phone responsive
+    @include respond(phone-land) {
+        display: none;
+    }
+
+    // Phone responsive
+    @include respond(phone) {
+        display: none;
+    }
+}
+
+.heading-box {
+    text-align: center;
+    padding: 1rem 2rem;
+    border: 3px solid $color-white;
+    background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
+    display: inline-block;
+
+    // Tab-port responsive
+    @include respond(tab-port) {
+        display: none;
+    }
+
+    // Phone responsive
+    @include respond(phone-land) {
+        display: none;
+    }
+
+    // Phone responsive
+    @include respond(phone) {
+        display: none;
+    }
+}

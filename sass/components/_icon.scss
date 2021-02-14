@@ -1,0 +1,32 @@
+.icon {
+    background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
+    background-clip: text;
+    color: transparent;
+
+    &__big {
+        font-size: 3rem;
+
+        // Tab-port responsive
+        @include respond(tab-port) {
+            font-size: 3rem;
+        }
+
+        // Phone responsive
+        @include respond(phone-land) {
+            font-size: 2.5rem;
+        }
+
+        // Phone responsive
+        @include respond(phone) {
+            font-size: 2.5rem;
+        }
+    }
+
+    &__huge {
+        font-size: 4rem;
+    }
+
+    &__jumbo {
+        font-size: 7rem;
+    }
+}
