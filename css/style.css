@@ -70,9 +70,6 @@ ORDER: Base + Typograhy > general layout + grid > page layout > components
 
 html {
   font-size: 63.5%; }
-  @media (max-width: 75em) {
-    html {
-      font-size: 56.25%; } }
   @media (max-width: 600px) {
     html {
       font-size: 50%; } }
@@ -119,6 +116,11 @@ body {
   font-size: 4.5rem;
   color: white;
   letter-spacing: 0.25rem; }
+  @media (max-width: 800px) {
+    .heading-primary {
+      padding: 0.2rem 1rem;
+      font-size: 3.8rem;
+      line-height: 1.5; } }
   @media (max-width: 600px) {
     .heading-primary {
       background: transparent;
@@ -150,6 +152,11 @@ body {
   text-transform: uppercase;
   letter-spacing: .15rem;
   transition: text-shadow .2s ease-out; }
+  @media (max-width: 800px) {
+    .heading-secondary {
+      font-size: 3rem;
+      text-align: center;
+      display: block; } }
   @media (max-width: 600px) {
     .heading-secondary {
       font-size: 2.8rem;
@@ -284,6 +291,9 @@ body {
 
 .u-margin__bottom--long {
   margin-bottom: 8rem; }
+  @media (max-width: 800px) {
+    .u-margin__bottom--long {
+      margin-bottom: 1rem; } }
 
 .u-margin__bottom--huge {
   margin-bottom: 10rem; }
@@ -378,6 +388,9 @@ body {
     transition-property: background-color, transform, box-shadow;
     transition-duration: .3s;
     transition-timing-function: ease-out; }
+    @media (max-width: 800px) {
+      .button--text:link, .button--text:visited {
+        font-size: 2rem; } }
     @media (max-width: 600px) {
       .button--text:link, .button--text:visited {
         font-size: 1.9rem; } }
@@ -412,6 +425,11 @@ body {
 
 .composition {
   position: relative; }
+  @media (max-width: 800px) {
+    .composition {
+      display: flex;
+      flex-direction: row;
+      justify-content: center; } }
   @media (max-width: 600px) {
     .composition {
       display: none; } }
@@ -429,22 +447,46 @@ body {
     transition-property: transform, outline;
     transition-duration: .3s;
     transition-timing-function: ease-out; }
+    @media (max-width: 800px) {
+      .composition__photo {
+        width: 30%;
+        position: relative; } }
     .composition__photo--p1 {
       left: 0;
       top: -2rem; }
+      @media (max-width: 800px) {
+        .composition__photo--p1 {
+          left: 0;
+          top: 0; } }
     .composition__photo--p2 {
       right: -5rem;
       top: 5rem; }
+      @media (max-width: 800px) {
+        .composition__photo--p2 {
+          left: 0;
+          top: 0; } }
     .composition__photo--p3 {
       left: 10rem;
       top: 17rem; }
+      @media (max-width: 800px) {
+        .composition__photo--p3 {
+          left: 0;
+          top: 0; } }
     .composition__photo:hover {
       transform: scale(1.05);
       outline: 1.2rem solid #55c57a;
       outline-offset: 1.2rem;
       z-index: 10; }
+      @media (max-width: 800px) {
+        .composition__photo:hover {
+          transform: scale(1);
+          outline: none; } }
   .composition:hover .composition__photo:not(:hover) {
     transform: scale(0.9); }
+    @media (max-width: 800px) {
+      .composition:hover .composition__photo:not(:hover) {
+        transform: scale(1);
+        outline: none; } }
 
 .feature-box {
   position: relative;
@@ -456,6 +498,11 @@ body {
   font-size: 1.6rem;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.3);
   transition: transform .3s ease-out; }
+  @media (max-width: 800px) {
+    .feature-box {
+      width: 60%;
+      height: 35rem;
+      margin: 0 auto; } }
   @media (max-width: 600px) {
     .feature-box {
       width: 70%;
@@ -478,6 +525,10 @@ body {
   -webkit-perspective: 150rem;
   position: relative;
   height: 53rem; }
+  @media (max-width: 800px) {
+    .card {
+      width: 60%;
+      margin: 0 auto; } }
   @media (max-width: 600px) {
     .card {
       width: 80%;
@@ -577,6 +628,32 @@ body {
         color: #4e4e4e; }
         .card__details ul li:not(:last-child) {
           border-bottom: 1px solid #eeeeee; }
+  @media (max-width: 800px) {
+    .card {
+      height: auto;
+      border-radius: 3px;
+      background-color: white;
+      box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); }
+      .card__details {
+        padding: 3rem; }
+      .card__side {
+        height: auto;
+        position: relative;
+        box-shadow: none; }
+        .card__side--back {
+          text-align: center;
+          transform: rotateY(0);
+          clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+          margin-top: 0rem;
+          padding: 8rem; }
+          .card__side--back-1 {
+            background-image: linear-gradient(to right bottom, #ffb900, #ff7730); }
+          .card__side--back-2 {
+            background-image: linear-gradient(to right bottom, #7ed56f, #28b485); }
+          .card__side--back-3 {
+            background-image: linear-gradient(to right bottom, #2998ff, #5643fa); }
+      .card:hover .card__side--front {
+        transform: rotateY(0); } }
   @media (max-width: 600px) {
     .card {
       height: auto;
@@ -619,6 +696,9 @@ body {
   width: 90%;
   display: block;
   transition: all .3s; }
+  @media (max-width: 800px) {
+    .form__input {
+      width: 100%; } }
   @media (max-width: 600px) {
     .form__input {
       width: 100%; } }
@@ -649,6 +729,9 @@ body {
   width: 90%;
   display: block;
   transition: all .3s; }
+  @media (max-width: 800px) {
+    .form__textarea {
+      width: 100%; } }
   @media (max-width: 600px) {
     .form__textarea {
       width: 100%; } }
@@ -845,6 +928,16 @@ blockquote span {
     -moz-clip-path: polygon(0 0, 100% 0, 100% 80vh, 0% 100%);
     -o-clip-path: polygon(0 0, 100% 0, 100% 80vh, 0% 100%);
     clip-path: polygon(0 0, 100% 0, 100% 80vh, 0% 100%); }
+    @media (max-width: 800px) {
+      .header--hero {
+        height: 99.5vh;
+        background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.7), rgba(40, 180, 133, 0.7)), url("../img/hero.jpg");
+        background-position: top center;
+        background-size: cover;
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+        -moz-clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+        -o-clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%); } }
     @media (max-width: 600px) {
       .header--hero {
         height: 70vh;
@@ -904,6 +997,9 @@ blockquote span {
     top: 45%;
     left: 50%;
     transform: translate(-50%, -50%); }
+    @media (max-width: 800px) {
+      .header__text-box {
+        top: 50%; } }
     @media (max-width: 600px) {
       .header__text-box {
         top: 50%; } }
@@ -1012,6 +1108,11 @@ blockquote span {
       margin-right: 6rem; }
   .row .col-1-of-2 {
     width: calc((100% - 6rem) / 2); }
+    @media (max-width: 800px) {
+      .row .col-1-of-2 {
+        width: 100%;
+        padding: 5rem;
+        text-align: left; } }
     @media (max-width: 600px) {
       .row .col-1-of-2 {
         width: 100%;
@@ -1029,6 +1130,10 @@ blockquote span {
         text-align: left; } }
   .row .col-1-of-3 {
     width: calc((100% - (2* 6rem)) / 3); }
+    @media (max-width: 800px) {
+      .row .col-1-of-3 {
+        width: 100%;
+        padding: 5rem; } }
     @media (max-width: 600px) {
       .row .col-1-of-3 {
         width: 100%;
@@ -1054,6 +1159,9 @@ blockquote span {
   background-color: #f7f7f7;
   padding: 25rem 0 30rem;
   margin-top: -20vh; }
+  @media (max-width: 800px) {
+    .section-about {
+      padding: 20rem 0; } }
   @media (max-width: 600px) {
     .section-about {
       padding: 10rem 1rem 0rem;
@@ -1125,6 +1233,9 @@ blockquote span {
 .section-remark {
   padding: 15rem 0;
   background-image: linear-gradient(to right bottom, #7ed56f, #28b485); }
+  @media (max-width: 800px) {
+    .section-remark {
+      padding: 12rem; } }
   @media (max-width: 600px) {
     .section-remark {
       padding: 8rem; } }
@@ -1140,6 +1251,12 @@ blockquote span {
   background-size: cover;
   border-radius: 3px;
   box-shadow: 0 1.7rem 4rem rgba(0, 0, 0, 0.2); }
+  @media (max-width: 800px) {
+    .remark {
+      background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 100%, transparent 100%), url(../img/remark_img.jpg);
+      background-size: cover;
+      border-radius: 3px;
+      box-shadow: 0 1.7rem 4rem rgba(0, 0, 0, 0.2); } }
   @media (max-width: 600px) {
     .remark {
       background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 100%, transparent 100%), url(../img/remark_img.jpg);
@@ -1161,6 +1278,9 @@ blockquote span {
   .remark__form {
     width: 50%;
     padding: 6rem; }
+    @media (max-width: 800px) {
+      .remark__form {
+        width: 100%; } }
     @media (max-width: 600px) {
       .remark__form {
         width: 100%; } }

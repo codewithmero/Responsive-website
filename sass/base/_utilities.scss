@@ -64,6 +64,11 @@
 
         &--long {
             margin-bottom: 8rem;
+
+            // medium laptop responsive
+            @include respond(mid-lap) {
+                margin-bottom: 1rem;
+            }
         }
 
         &--huge {

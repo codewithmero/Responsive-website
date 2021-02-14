@@ -56,6 +56,11 @@
             transition-duration: .3s;
             transition-timing-function: ease-out;
 
+            // medium laptop responsive
+            @include respond(mid-lap) {
+                font-size: 2rem;
+            }
+
             // Tab-port responsive
             @include respond(tab-port) {
                 font-size: 1.9rem;

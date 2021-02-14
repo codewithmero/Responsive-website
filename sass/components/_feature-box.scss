@@ -9,6 +9,14 @@
     box-shadow: 0 1.5rem 4rem rgba($color-black, .3);
     transition: transform .3s ease-out;
 
+    // medium laptop responsive
+    @include respond(mid-lap) {
+        width: 60%;
+        height: 35rem;
+
+        margin: 0 auto;
+    }
+
     // Tab-port responsive
     @include respond(tab-port) {
         width: 70%;

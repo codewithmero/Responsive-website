@@ -23,6 +23,13 @@ body {
     color: $color-white;
     letter-spacing: 0.25rem;
 
+    // Medium laptop responsive
+    @include respond(mid-lap) {
+        padding: 0.2rem 1rem;
+        font-size: 3.8rem;
+        line-height: 1.5;
+    }
+
     // Tablet-portrait responsive
     @include respond(tab-port) {
         background: transparent;
@@ -60,6 +67,13 @@ body {
     text-transform: uppercase;
     letter-spacing: .15rem;
     transition: text-shadow .2s ease-out;
+
+    // medium laptop responsive
+    @include respond(mid-lap) {
+        font-size: 3rem;
+        text-align: center;
+        display: block;
+    }
 
     // Tablet-portrait responsive
     @include respond(tab-port) {
